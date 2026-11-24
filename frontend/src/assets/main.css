@@ -1,0 +1,6 @@
+@import './base.css';
+
+:root {
+  --cfe-green-dark: #00612b;
+  --cfe-green: #1e824c;
+}

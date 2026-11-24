@@ -1,0 +1,27 @@
+# Secretos y configuracion local (nunca se suben)
+.env
+.env.*
+!.env.example
+
+# Dependencias y compilados
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# Datos de trabajo locales (respaldos y borradores de altas de equipos)
+borradores/
+
+# Herramientas locales
+.claude/
+verify4.js
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
