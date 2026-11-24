@@ -15,6 +15,9 @@ const options = [
   { to: '/redes', title: 'REDES POR SUBESTACIÓN', icon: 'redes' },
   { to: '/agregar-equipos', title: 'AGREGAR EQUIPOS', icon: 'r3' },
 ] as const
+
+const version = __APP_VERSION__
+const commit = __APP_COMMIT__
 </script>
 
 <template>
@@ -30,6 +33,8 @@ const options = [
         :icon="option.icon"
       />
     </div>
+
+    <footer class="pie">CFE Transmisión 2026 · v{{ version }} · {{ commit }}</footer>
   </main>
 </template>
 
@@ -41,20 +46,42 @@ const options = [
 }
 
 h1 {
-  font-size: 1.3rem;
-  margin-bottom: 1.25rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.9rem;
   color: var(--color-heading);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 0.7rem;
+}
+
+.pie {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--color-text);
+  opacity: 0.45;
 }
 
 @media (max-width: 640px) {
+  .home {
+    padding: 0.5rem 0.6rem;
+  }
+
+  h1 {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+  }
+
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .pie {
+    margin-top: 1rem;
   }
 }
 </style>

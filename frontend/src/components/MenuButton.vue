@@ -29,8 +29,8 @@ const isExternal = !!props.href
 .menu-button {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.1rem 1.4rem;
+  gap: 0.8rem;
+  padding: 0.7rem 1.1rem;
   background: var(--color-background-soft);
   border: 1px solid var(--color-border);
   border-radius: 10px;
@@ -52,8 +52,8 @@ const isExternal = !!props.href
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   flex-shrink: 0;
   border-radius: 8px;
   background: var(--color-background-mute);
@@ -61,28 +61,34 @@ const isExternal = !!props.href
 }
 
 .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.9rem;
+  height: 1.9rem;
 }
 
 @media (max-width: 640px) {
+  /* Cuadritos: icono arriba, nombre abajo. */
   .menu-button {
-    padding: 0.9rem 1.1rem;
-    gap: 0.85rem;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 5.2rem;
+    padding: 0.4rem 0.3rem;
+    gap: 0.3rem;
+    text-align: center;
   }
 
   .icon-wrap {
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 2.3rem;
+    height: 2.3rem;
   }
 
   .icon {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .title {
-    font-size: 0.9rem;
+    font-size: 0.64rem;
+    overflow-wrap: anywhere;
   }
 }
 

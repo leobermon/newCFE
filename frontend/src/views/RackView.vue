@@ -216,4 +216,51 @@ h1 {
   max-width: 100%;
   margin: 0 auto;
 }
+
+/* Vista movil: sin rieles laterales, titulos mas chicos e imagenes a todo lo ancho. */
+@media (max-width: 640px) {
+  .rack {
+    padding: 0.5rem 0.5rem 1.5rem;
+  }
+
+  .cabecera {
+    padding: 0.5rem 0.75rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .etiqueta {
+    font-size: 1.15rem;
+  }
+
+  .archivos {
+    margin-top: 0.4rem;
+  }
+
+  .fondo {
+    min-height: 0;
+    padding: 0.75rem 1.1rem;
+    border-width: 0.4rem;
+  }
+
+  .fondo::before,
+  .fondo::after {
+    display: none;
+  }
+
+  .equipos {
+    gap: 0.8rem;
+  }
+
+  .equipo h2 {
+    padding: 0.05rem 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .equipo img {
+    width: 100%;
+  }
+}
 </style>
